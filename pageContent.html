@@ -1,0 +1,770 @@
+<!DOCTYPE html><html lang="en"><head>
+  <link href="https://fonts.googleapis.com/css?family=Source Sans Pro" rel="stylesheet">
+  <link href="https://s-f.scribdassets.com/stylesheets/fonts/source_serif_pro/source_serif_pro.css" rel="stylesheet">
+  <link href="https://s-f.scribdassets.com/stylesheets/fonts/arizona_text/arizona_text.css" rel="stylesheet">    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      <meta name="ulp-version" content="1.17.218">
+    
+    
+    
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="shortcut icon" href="https://s-f.scribdassets.com/images/icons/clear_auth0_favicon.svg">
+    
+    
+    <style>
+      @font-face {
+        font-family: "ulp-font";
+        src: url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+      }
+    </style>
+    
+    <link rel="stylesheet" href="https://cdn.auth0.com/ulp/react-components/1.94.6/css/main.cdn.min.css">
+    <style id="custom-styles-container">
+      
+        
+
+
+
+
+        
+          :root, .af-custom-form-container .af-form {
+    --primary-color: #1E7B85;
+  }
+        
+      
+
+        
+          :root, .af-custom-form-container .af-form {
+    --button-font-color: #ffffff;
+  }
+        
+      
+
+        
+          :root {
+    --secondary-button-border-color: #c9cace;
+    --social-button-border-color: #c9cace;
+    --radio-button-border-color: #c9cace;
+  }
+        
+      
+
+        
+          :root {
+    --secondary-button-text-color: #1e212a;
+  }
+        
+      
+
+        
+          :root {
+    --link-color: #1E7B85;
+  }
+        
+      
+
+        
+          :root {
+    --title-font-color: #1e212a;
+  }
+        
+      
+
+        
+          :root {
+    --font-default-color: #1e212a;
+  }
+        
+      
+
+        
+          :root {
+    --widget-background-color: #ffffff;
+  }
+        
+      
+
+        
+          :root {
+    --box-border-color: #c9cace;
+  }
+        
+      
+
+        
+          :root {
+    --font-light-color: #65676e;
+  }
+        
+      
+
+        
+          :root {
+    --input-text-color: #000000;
+  }
+        
+      
+
+        
+          :root {
+    --input-border-color: #c9cace;
+    --border-default-color: #c9cace;
+  }
+        
+      
+
+        
+          :root {
+    --input-background-color: #ffffff;
+  }
+        
+      
+
+        
+          :root {
+    --icon-default-color: #65676e;
+  }
+        
+      
+
+        
+          :root {
+    --error-color: #d03c38;
+    --error-text-color: #ffffff;
+  }
+        
+      
+
+        
+          :root {
+    --success-color: #13a688;
+  }
+        
+      
+
+        
+          :root {
+    --base-focus-color: #1E7B85;
+    --transparency-focus-color: rgba(30,123,133, 0.15);
+  }
+        
+      
+
+        
+          :root {
+    --base-hover-color: #000000;
+    --transparency-hover-color: rgba(0,0,0, var(--hover-transparency-value));
+  }
+        
+      
+
+        
+      
+
+
+
+
+        
+          @font-face {
+    font-family: 'ULP Custom';
+    font-style: normal;
+    font-weight: var(--font-default-weight);
+    src: local('ULP Custom'), url('https://fonts.googleapis.com/css?family=Source+Sans+Pro') format('woff');
+  }
+
+  body {
+    --font-family: 'ULP Custom', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
+  }
+        
+      
+
+        
+          html, :root, .af-custom-form-container .af-form {
+    font-size: 20px;
+    --default-font-size: 20px;
+  }
+        
+      
+
+        
+          body {
+    --title-font-size: 1rem;
+    --title-font-weight: var(--font-bold-weight);
+  }
+        
+      
+
+        
+          .c41535f9a {
+    font-size: 0.8rem;
+    font-weight: var(--font-default-weight);
+  }
+        
+      
+
+        
+          .c2701a345 {
+    font-size: 0.8rem;
+    font-weight: var(--font-default-weight);
+  }
+  .ulp-passkey-benefit-heading {
+    font-size: 0.95rem;
+  }
+        
+      
+
+        
+          .c1d1b1e07, .c0526c8ee {
+    font-size: 0.8rem;
+    font-weight: var(--font-default-weight);
+  }
+        
+      
+
+        
+          body {
+    --ulp-label-font-size: 0.8rem;
+    --ulp-label-font-weight: var(--font-default-weight);
+  }
+        
+      
+
+        
+          .c41f6c9f2, .c7ee8ceb0, [id^='ulp-container-'] a {
+    font-size: 0.8rem;
+    font-weight: var(--font-bold-weight) !important;
+  }
+        
+      
+
+        
+          
+        
+      
+
+
+
+
+        
+          :root {
+    --button-border-width: 1px;
+    --social-button-border-width: 1px;
+    --radio-border-width: 1px;
+  }
+        
+      
+
+        
+          body {
+    --button-border-radius: 3px;
+    --radio-border-radius: 3px;
+  }
+        
+      
+
+        
+          :root {
+    --input-border-width: 1px;
+  }
+        
+      
+
+        
+          body {
+    --input-border-radius: 3px;
+  }
+
+  .af-custom-form-container .af-form {
+    --border-radius: 3px;
+  }
+        
+      
+
+        
+          :root {
+    --border-radius-outer: 5px;
+  }
+        
+      
+
+        
+          :root {
+    --box-border-width: 0px;
+  }
+        
+      
+
+        
+          
+        
+      
+
+
+
+
+        
+          
+    body {
+      --logo-alignment: 0 auto;
+    }
+  
+        
+      
+
+        
+          
+      .cd7df2892 {
+        content: url('https://cdn.auth0.com/ulp/react-components/1.59/img/theme-generic/logo-generic.svg');
+      }
+    
+        
+      
+
+        
+          body {
+    --logo-height: 35px;
+  }
+  .cd7df2892 {
+    height: var(--logo-height);
+  }
+  
+        
+      
+
+        
+          
+    body {
+      --header-alignment: center;
+    }
+  
+        
+      
+
+        
+          .c22884cc9 {
+    display: flex;
+    flex-direction: column;
+  }
+  .c22884cc9 form, .c22884cc9 > .c77150178 {
+    order: 3;
+  }
+  .c22884cc9 ._alternate-action, .c22884cc9 #ulp-container-form-footer-start, .c22884cc9 #ulp-container-form-footer-end {
+    order: 4
+  }
+  .c22884cc9 > .cfcfcb94a {
+    order: 2;
+    margin-bottom: 24px;
+  }
+  .c22884cc9 .c5dd1c598 {
+    order: 1;
+    margin-top: 0;
+  }
+        
+      
+
+
+
+
+        
+          .cc0a09eec {
+    --page-background-alignment: center;
+  }
+        
+      
+
+        
+          body {
+    --page-background-color: #F9FAFF;
+  }
+        
+      
+
+        
+          
+        
+      
+
+
+
+
+      
+    </style>
+    <style>
+    /* By default, hide features for javascript-disabled browsing */
+    /* We use !important to override any css with higher specificity */
+    /* It is also overriden by the styles in <noscript> in the header file */
+    .no-js {
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+  </style>
+  <noscript>
+    <style>
+      /* We use !important to override the default for js enabled */
+      /* If the display should be other than block, it should be defined specifically here */
+      .js-required { display: none !important; }
+      .no-js {
+        clip: auto;
+        clip-path: none;
+        height: auto;
+        overflow: auto;
+        position: static;
+        white-space: normal;
+        width: var(--prompt-width);
+      }
+    </style>
+  </noscript>
+    
+<style>
+    :root {
+      
+      --base-focus-color: #1E7B85;
+      --footer-text-color: #596280;
+      --link-color: #1E7B85;
+      --primary-color: #1E7B85;
+      
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    body {
+      
+      background-color: #FBF9F8;
+      
+    }
+
+    #custom-prompt-logo {
+      
+      background-image: url("data:image/svg+xml,%3Csvg fill='none' height='41' viewBox='0 0 34 41' width='34' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='m9.55134 22.6879c-2.24431 0-4.05783-.8259-5.43828-2.478-1.38174-1.6521-2.12359-3.9856-2.12359-6.9319 0-.0324.00027-.0646.00054-.0967.00095-.1126.00188-.2236-.00895-.3353v-.1026c0-7.50339 5.92055-12.7434 14.39804-12.7434 5.4979 0 10.3636 1.68713 14.4619 5.01499l1.3565 1.1014-4.349 6.25921-3.2069-2.1353 2.3124-3.35166c-3.0755-2.05984-6.6245-3.10223-10.5749-3.10223-2.0511 0-3.8804.38502-5.4175 1.08689-.5354.27834-1.06037.60056-1.57177.97264-1.74781 1.27371-2.62204 2.79389-2.62204 4.56176 0 1.0525.43081 1.5783 1.29468 1.5783.19452 0 .5826-.0735 1.16553-.2206.60429-.1265 1.0904-.1897 1.4575-.1897 1.1869 0 2.3035.4684 3.3503 1.405 1.0467.9364 1.5711 2.2255 1.5711 3.8669 0 1.5997-.5402 2.9728-1.619 4.1197-1.0795 1.1472-2.558 1.7206-4.43656 1.7206zm10.40776 1.4006c0-1.5994.5402-2.9729 1.619-4.1197 1.0794-1.1472 2.5579-1.7206 4.4365-1.7206 2.2443 0 4.0578.8259 5.4383 2.4783 1.3817 1.6518 2.0721 3.9512 2.0721 6.8975 0 4.0613-1.2678 7.2452-3.8038 9.5497-2.4767 2.2507-5.9891 3.5778-9.5103 3.7368-.6444.0562-1.3057.0884-1.9873.0884-6.1154 0-11.94666-2.2246-16.41944-6.2635l-1.329306-1.2001 5.226056-6.229 3.02533 2.3741-2.90406 3.4162c3.53544 2.6651 7.87522 4.1159 12.40142 4.1159 5.3298 0 9.0138-2.0299 10.4512-5.5815.0806-.3563.1233-.7233.1233-1.1027 0-1.0524-.4308-1.5782-1.2943-1.5782-.1949 0-.5829.0735-1.1659.2206-.6043.1269-1.0904.1893-1.4571.1893-1.1872 0-2.3042-.468-3.3506-1.4046-1.0468-.9364-1.5711-2.2256-1.5711-3.8669z' fill='%231e7b85' fill-rule='evenodd'/%3E%3C/svg%3E");
+      
+      max-height: 41px;
+    }
+
+    h1 {
+      
+      font-family: 'Source Serif Pro';
+      font-size: 23px!important;
+      font-weight: 600!important;
+      
+      margin-bottom: 4px !important;
+    }
+
+    header {
+      padding: 24px 40px !important;
+    }
+
+    header > div > p {
+      font-size: 12px;
+    }
+
+    span[data-provider^=facebook] {
+      background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none' class='_96z7' aria-labelledby='fb-app-logo'><path d='M30 15.091C30 6.756 23.285 0 15 0S0 6.756 0 15.091C0 22.625 5.484 28.868 12.656 30V19.454H8.848V15.09h3.808v-3.324c0-3.782 2.239-5.872 5.666-5.872 1.64 0 3.358.295 3.358.295v3.714h-1.893c-1.863 0-2.443 1.164-2.443 2.358v2.83h4.16l-.665 4.362h-3.495V30C24.516 28.868 30 22.625 30 15.091z' fill='%231778f2'/></svg>") !important;
+    }
+
+    .behavior-tag {
+      background: #F0F2F9;
+      color: #303140;
+      font-family: 'Source Sans Pro';
+      font-size: 14px;
+      line-height: 21px;
+      margin: 0 auto 36px;
+      padding: 4px 12px;
+      width: fit-content;
+    }
+
+    .extra-header-space {
+      padding-top: 24px;
+    }
+
+    .footer-img {
+      width: 100%;
+    }
+
+    .footer-img-text {
+      display: flex;
+      flex-direction: row;
+      font-family: 'Source Sans Pro';
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      padding: 40px 0 15px;
+
+      
+      color: #8A91A0;
+      
+    }
+
+    .footer-img-text:after {
+      content: "  ";
+      flex: 1 1;
+      margin: auto auto auto 10px;
+
+      
+      border-bottom: 1px solid #CFD6E0;
+      
+    }
+
+    .tos-container a {
+      color: var(--footer-text-color);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 150%;
+      text-decoration: underline;
+    }
+
+    .tos-container {
+      color: var(--footer-text-color);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 150%;
+      margin-top: 24px;
+    }
+
+    
+      .ulp-alternate-action {
+        margin-top: 24px !important;
+      }
+    
+
+    .ulp-alternate-action p {
+      line-height: 24px;
+    }
+
+    .mfa-change-email-container {
+      margin-top: var(--spacing-3);
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    .mfa-footer-custom-container {
+        order: 10;
+    }
+
+    @media (max-width: 600px) {
+      .mfa-change-email-container {
+        margin-top: var(--spacing-1-5);
+      }
+    }
+
+    .mfa-change-email-container a {
+      font-size: 0.8rem;
+      font-weight: var(--font-bold-weight);
+    }
+  </style>
+  <title>Log in | Scribd</title>
+</head>
+
+<body class="_widget-auto-layout _use-custom-prompt-logo"><main class="_widget login">
+  <section class="c66e20158 _prompt-box-outer ca20e631b">
+    <div class="ceeb7e995 c98450f08">
+      
+    
+      <div class="c35cc68b7">
+        <header class="caf9c4b6d cb03adf9e">
+          <div title="Scribd" id="custom-prompt-logo" style="width: auto !important; height: 60px !important; position: static !important; margin: auto !important; padding: 0 !important; background-color: transparent !important; background-position: center !important; background-size: contain !important; background-repeat: no-repeat !important"></div>
+        
+          <img class="cd7df2892 c62875a1f" id="prompt-logo-center" src="https://assets0.scribd.com/images/scribd_logo_horiz_small.svg" alt="Scribd">
+        
+          
+            <h1 class="c85308b88 c6689a483">Welcome back</h1>
+          
+        
+          <div class="c41535f9a c43737e03">
+            
+              <p class="c28e85330 cff590de0">One subscription for Scribd, Everand, and SlideShare</p>
+            
+          </div>
+        </header>
+      
+        <div class="c2701a345 c22884cc9">
+          
+        
+          
+            
+              <form method="POST" class="cb2e1bdc9 c165a3537" data-form-primary="true">
+                <input type="hidden" name="state" value="hKFo2SBsYmJ3T3M2cDNJOFJDQ19vb1FiNHEzY2tLVC00aTZVZKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIGRCZ2NyVW84cjR2YnpnZTFrWkxqN2liUUFJM0hsYndzo2NpZNkgZ3ljN3lyZnpzdkpmaXd5bHNlYXU4Y3g5dVZhb2FOU1A">
+              
+                
+              
+                
+              
+                <div class="c9ad40d30 c77150178">
+                  <div class="c862f080e">
+                    
+                  
+                    
+                      
+                        <div class="input-wrapper _input-wrapper">
+                          <div class="c6d02143e c46e32be0 text c70cc0741" data-action-text="" data-alternate-action-text="">
+                            <label class="cf59a1f59 no-js c6fb1f00d ca974173a" for="username">
+                              Email address*
+                            </label>
+                          
+                            <input class="input c19ad00c3 c30d9afca" inputmode="email" name="username" id="username" type="text" value="ibsshanxd@gmail.com" required="" autocomplete="email" autocapitalize="none" spellcheck="false" autofocus="">
+                          
+                            <div class="cf59a1f59 js-required c6fb1f00d ca974173a" data-dynamic-label-for="username" aria-hidden="true">
+                              Email address*
+                            </div>
+                          </div>
+                        
+                          
+                        </div>
+                      
+                    
+                  
+                    
+                      <div class="input-wrapper _input-wrapper">
+                        <div class="c6d02143e c46e32be0 password c0ff9e370" data-action-text="" data-alternate-action-text="">
+                          <label class="cf59a1f59 no-js c6fb1f00d c7e7f74a2" for="password">
+                            Password*
+                          </label>
+                        
+                          <input class="input c19ad00c3 ce9b3173b" name="password" id="password" type="password" required="" autocomplete="current-password" autocapitalize="none" spellcheck="false">
+                        
+                          <div class="cf59a1f59 js-required c6fb1f00d c7e7f74a2" data-dynamic-label-for="password" aria-hidden="true">
+                            Password*
+                          </div>
+                        
+                          
+                            <button type="button" class="c1d1b1e07 ulp-button-icon c3a9491fe _button-icon" data-action="toggle">
+                              <span aria-hidden="true" class="password-icon-tooltip show-password-tooltip">Show password</span>
+                            
+                              <span aria-hidden="true" class="password-icon-tooltip hide-password-tooltip hide">Hide password</span>
+                            
+                              <span class="screen-reader-only password-toggle-label" data-label="show-password">Show password</span>
+                            
+                              <span class="screen-reader-only password-toggle-label hide" data-label="hide-password">Hide password</span>
+                            
+                              <span class="cd6934de5 password js-required" aria-hidden="true"></span>
+                            </button>
+                          
+                        </div>
+                      
+                        
+                      </div>
+                    
+                  
+                    
+                      
+                        <div data-captcha-provider="recaptcha_enterprise" data-captcha-sitekey="6LeD5FYoAAAAAAto5jQOO70fG0LcVFL_sMY3s0vZ" data-captcha-lang="en" class="ulp-captcha-container c54688395">
+                          
+                            <div class="ulp-recaptcha ulp-captcha" id="ulp-recaptcha"></div>
+                          
+                        
+                          
+                            <input type="hidden" name="captcha" value="">
+                          
+                        </div>
+                      
+                    
+                  </div>
+                </div>
+              
+                
+                  
+                    <p class="c9ff8630d c2039e792">
+                      
+                        <a class="c7ee8ceb0 c879834d5 c8023864a" href="/u/login/password-reset-start/ScribdDB?state=hKFo2SBsYmJ3T3M2cDNJOFJDQ19vb1FiNHEzY2tLVC00aTZVZKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIGRCZ2NyVW84cjR2YnpnZTFrWkxqN2liUUFJM0hsYndzo2NpZNkgZ3ljN3lyZnpzdkpmaXd5bHNlYXU4Y3g5dVZhb2FOU1A&amp;ui_locales=en">Forgot password?</a>
+                      
+                    </p>
+                  
+                
+              
+                
+              
+                <div class="cc199ae96">
+                  
+                    <button type="submit" name="action" value="default" class="c1d1b1e07 c94ec4107 c3a9491fe cc1fd6969 c30010b38" data-action-button-primary="true">Continue</button>
+                  
+                </div>
+              </form>
+            
+          
+        
+          
+        
+          
+            <div class="ulp-alternate-action  _alternate-action __s16nu9">
+              <p class="c28e85330 cff590de0 ca0be194f">Don't have an account?
+                <a class="c7ee8ceb0 c8023864a" href="/u/signup?state=hKFo2SBsYmJ3T3M2cDNJOFJDQ19vb1FiNHEzY2tLVC00aTZVZKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIGRCZ2NyVW84cjR2YnpnZTFrWkxqN2liUUFJM0hsYndzo2NpZNkgZ3ljN3lyZnpzdkpmaXd5bHNlYXU4Y3g5dVZhb2FOU1A&amp;ui_locales=en">Sign up</a>
+              </p>
+            </div>
+          
+        
+          
+        
+          
+            <div class="c06983e79 cfcfcb94a">
+              <span>Or</span>
+            </div>
+          
+        
+          
+            <div class="cc035f089 c5dd1c598">
+              
+            
+              
+                <form method="post" data-provider="google" class="c0526c8ee cc13544a4 c389dd0db" data-form-secondary="true">
+                  <input type="hidden" name="state" value="hKFo2SBsYmJ3T3M2cDNJOFJDQ19vb1FiNHEzY2tLVC00aTZVZKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIGRCZ2NyVW84cjR2YnpnZTFrWkxqN2liUUFJM0hsYndzo2NpZNkgZ3ljN3lyZnpzdkpmaXd5bHNlYXU4Y3g5dVZhb2FOU1A">
+                
+                  <input type="hidden" name="connection" value="google-oauth2">
+                
+                  <button type="submit" class="cfda96338 c6d018be6 cc91dade8" data-provider="google" data-action-button-secondary="true">
+                    
+                      <span class="ce6b87f3d ce1824025" data-provider="google"></span>
+                    
+                  
+                    <span class="ca4918a57">Continue with Google</span>
+                  </button>
+                </form>
+              
+                <form method="post" data-provider="facebook" class="c0526c8ee cc13544a4 c9f65969d" data-form-secondary="true">
+                  <input type="hidden" name="state" value="hKFo2SBsYmJ3T3M2cDNJOFJDQ19vb1FiNHEzY2tLVC00aTZVZKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIGRCZ2NyVW84cjR2YnpnZTFrWkxqN2liUUFJM0hsYndzo2NpZNkgZ3ljN3lyZnpzdkpmaXd5bHNlYXU4Y3g5dVZhb2FOU1A">
+                
+                  <input type="hidden" name="connection" value="facebook">
+                
+                  <button type="submit" class="cfda96338 c6d018be6 cded3e660" data-provider="facebook" data-action-button-secondary="true">
+                    
+                      <span class="ce6b87f3d ce1824025" data-provider="facebook"></span>
+                    
+                  
+                    <span class="ca4918a57">Continue with Facebook</span>
+                  </button>
+                </form>
+              
+                <form method="post" data-provider="apple" class="c0526c8ee cc13544a4 c43048a10" data-form-secondary="true">
+                  <input type="hidden" name="state" value="hKFo2SBsYmJ3T3M2cDNJOFJDQ19vb1FiNHEzY2tLVC00aTZVZKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIGRCZ2NyVW84cjR2YnpnZTFrWkxqN2liUUFJM0hsYndzo2NpZNkgZ3ljN3lyZnpzdkpmaXd5bHNlYXU4Y3g5dVZhb2FOU1A">
+                
+                  <input type="hidden" name="connection" value="apple">
+                
+                  <button type="submit" class="cfda96338 c6d018be6 cf5ec7130" data-provider="apple" data-action-button-secondary="true">
+                    
+                      <span class="ce6b87f3d ce1824025" data-provider="apple"></span>
+                    
+                  
+                    <span class="ca4918a57">Continue with Apple</span>
+                  </button>
+                </form>
+              
+            
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    
+  </section>
+</main>
+<script id="client-scripts">
+window.ulpFlags = {"enable_ulp_wcag_compliance":false};!function(){var e,t,n,r,E,y,S,C,A,F,a,i,o={exports:function(e,t){return"object"==typeof e.ulpFlags&&null!==e.ulpFlags?e.ulpFlags:{}}}.exports(window,document),u=((e={}).exports=function(n,a){var r={};function u(e,t){if(e.classList)return e.classList.add(t);var n=e.className.split(" ");-1===n.indexOf(t)&&(n.push(t),e.className=n.join(" "))}function i(e,t,n,r){return e.addEventListener(t,n,r)}function o(e){return"string"==typeof e}function c(e,t){return o(e)?a.querySelector(e):e.querySelector(t)}function l(e,t){if(e.classList)return e.classList.remove(t);var n=e.className.split(" "),r=n.indexOf(t);-1!==r&&(n.splice(r,1),e.className=n.join(" "))}function s(e,t){return e.getAttribute(t)}function f(e,t,n){return e.setAttribute(t,n)}var e=["text","number","email","password","tel","url"],t="select,textarea,"+e.map(function(e){return'input[type="'+e+'"]'}).join(",");return{addClass:u,toggleClass:function(e,t,n){if(!0===n||!1===n)return r=e,a=t,!0!==n?l(r,a):u(r,a);var r,a;if(e.classList)return e.classList.toggle(t);var i=e.className.split(" "),o=i.indexOf(t);-1!==o?i.splice(o,1):i.push(t),e.className=i.join(" ")},hasClass:function(e,t){return e.classList?e.classList.contains(t):-1!==e.className.split(" ").indexOf(t)},addClickListener:function(e,t){return i(e,"click",t)},addEventListener:i,getAttribute:s,hasAttribute:function(e,t){return e.hasAttribute(t)},getElementById:function(e){return a.getElementById(e)},getParent:function(e){return e.parentNode},isString:o,loadScript:function(e,t){var n=a.createElement("script");for(var r in t)r.startsWith("data-")?n.dataset[r.replace("data-","")]=t[r]:n[r]=t[r];n.src=e,a.body.appendChild(n)},removeScript:function(e){a.querySelectorAll('script[src="'+e+'"]').forEach(function(e){e.remove()})},poll:function(e){var i=e.interval||2e3,t=e.url||n.location.href,o=e.condition||function(){return!0},u=e.onSuccess||function(){},c=e.onError||function(){};return setTimeout(function r(){var a=new XMLHttpRequest;return a.open("GET",t),a.setRequestHeader("Accept","application/json"),a.onload=function(){if(200===a.status){var e="application/json"===a.getResponseHeader("Content-Type").split(";")[0]?JSON.parse(a.responseText):a.responseText;return o(e)?u():setTimeout(r,i)}if(429!==a.status)return c({status:a.status,responseText:a.responseText});var t=1e3*Number.parseInt(a.getResponseHeader("X-RateLimit-Reset")),n=t-(new Date).getTime();return setTimeout(r,i<n?n:i)},a.send()},i)},querySelector:c,querySelectorAll:function(e,t){var n=o(e)?a.querySelectorAll(e):e.querySelectorAll(t);return Array.prototype.slice.call(n)},removeClass:l,removeElement:function(e){return e.remove()},setAttribute:f,removeAttribute:function(e,t){return e.removeAttribute(t)},swapAttributes:function(e,t,n){var r=s(e,t),a=s(e,n);f(e,n,r),f(e,t,a)},setGlobalFlag:function(e,t){r[e]=!!t},getGlobalFlag:function(e){return!!r[e]},preventFormSubmit:function(e){e.stopPropagation(),e.preventDefault()},matchMedia:function(e){return"function"!=typeof n.matchMedia&&n.matchMedia(e).matches},dispatchEvent:function(e,t,n){var r;"function"!=typeof Event?(r=a.createEvent("Event")).initCustomEvent(t,n,!1):r=new Event(t,{bubbles:n}),e.dispatchEvent(r)},timeoutPromise:function(e,a){return new Promise(function(t,n){var r=setTimeout(function(){n(new Error("timeoutPromise: promise timed out"))},e);a.then(function(e){clearTimeout(r),t(e)},function(e){clearTimeout(r),n(e)})})},createMutationObserver:function(e){return"undefined"==typeof MutationObserver?null:new MutationObserver(e)},consoleWarn:function(){(console.warn||console.log).apply(console,arguments)},getConfigJson:function(e){try{var t=c(e);if(!t)return null;var n=t.value;return n?JSON.parse(n):null}catch(e){return null}},getCSSVariable:function(e){return getComputedStyle(a.documentElement).getPropertyValue(e)},removeAndTrimString:function(e,t){var n=new RegExp(t,"g"),r=e.replace(n,"");return r=r.replace(/\s+/g,"  ").trim()},setTimeout:setTimeout,globalWindow:n,SUPPORTED_INPUT_TYPES:e,ELEMENT_TYPE_SELECTOR:t,RUN_INIT:!0}},e.exports)(window,document),c=function(){var e={};function v(e){if(!("string"==typeof e||e instanceof String)){var t=typeof e;throw null===e?t="null":"object"===t&&(t=e.constructor.name),new TypeError("Expected a string but received a "+t)}}function m(e,t){var n,r;v(e),r="object"==typeof t?(n=t.min||0,t.max):(n=t,arguments[2]);var a=encodeURI(e).split(/%..|./).length-1;return n<=a&&(void 0===r||a<=r)}function h(e,t){for(var n in void 0===e&&(e={}),t)void 0===e[n]&&(e[n]=t[n]);return e}var g={require_tld:!0,allow_underscores:!1,allow_trailing_dot:!1,allow_numeric_tld:!1,allow_wildcard:!1,ignore_max_length:!1},t="(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])",n="("+t+"[.]){3}"+t,r=new RegExp("^"+n+"$"),a="(?:[0-9a-fA-F]{1,4})",i=new RegExp("^((?:"+a+":){7}(?:"+a+"|:)|(?:"+a+":){6}(?:"+n+"|:"+a+"|:)|(?:"+a+":){5}(?::"+n+"|(:"+a+"){1,2}|:)|(?:"+a+":){4}(?:(:"+a+"){0,1}:"+n+"|(:"+a+"){1,3}|:)|(?:"+a+":){3}(?:(:"+a+"){0,2}:"+n+"|(:"+a+"){1,4}|:)|(?:"+a+":){2}(?:(:"+a+"){0,3}:"+n+"|(:"+a+"){1,5}|:)|(?:"+a+":){1}(?:(:"+a+"){0,4}:"+n+"|(:"+a+"){1,6}|:)|(?::((?::"+a+"){0,5}:"+n+"|(?::"+a+"){1,7}|:)))(%[0-9a-zA-Z-.:]{1,})?$");function b(e,t){return void 0===t&&(t=""),v(e),(t=String(t))?"4"===t?r.test(e):"6"===t&&i.test(e):b(e,4)||b(e,6)}var _={allow_display_name:!1,allow_underscores:!1,require_display_name:!1,allow_utf8_local_part:!0,require_tld:!0,blacklisted_chars:"",ignore_max_length:!1,host_blacklist:[],host_whitelist:[]},w=/^([^\x00-\x1F\x7F-\x9F\cX]+)</i,x=/^[a-z\d!#\$%&'\*\+\-\/=\?\^_`{\|}~]+$/i,E=/^[a-z\d]+$/,y=/^([\s\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e]|(\\[\x01-\x09\x0b\x0c\x0d-\x7f]))*$/i,S=/^[a-z\d!#\$%&'\*\+\-\/=\?\^_`{\|}~\u00A1-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+$/i,C=/^([\s\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|(\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*$/i,A=254;function o(e,t){if(v(e),(t=h(t,_)).require_display_name||t.allow_display_name){var n=e.match(w);if(n){var r=n[1];if(e=e.replace(r,"").replace(/(^<|>$)/g,""),r.endsWith(" ")&&(r=r.slice(0,-1)),!function(e){var t=e.replace(/^"(.+)"$/,"$1");if(!t.trim())return!1;if(/[\.";<>]/.test(t)){if(t===e)return!1;if(t.split('"').length!==t.split('\\"').length)return!1}return!0}(r))return!1}else if(t.require_display_name)return!1}if(!t.ignore_max_length&&e.length>A)return!1;var a=e.split("@"),i=a.pop(),o=i.toLowerCase();if(t.host_blacklist.includes(o))return!1;if(0<t.host_whitelist.length&&!t.host_whitelist.includes(o))return!1;var u=a.join("@");if(t.domain_specific_validation&&("gmail.com"===o||"googlemail.com"===o)){var c=(u=u.toLowerCase()).split("+")[0];if(!m(c.replace(/\./g,""),{min:6,max:30}))return!1;for(var l=c.split("."),s=0;s<l.length;s++)if(!E.test(l[s]))return!1}if(!(!1!==t.ignore_max_length||m(u,{max:64})&&m(i,{max:254})))return!1;if(!function(e,t){v(e),(t=h(t,g)).allow_trailing_dot&&"."===e[e.length-1]&&(e=e.substring(0,e.length-1)),!0===t.allow_wildcard&&0===e.indexOf("*.")&&(e=e.substring(2));var n=e.split("."),r=n[n.length-1];if(t.require_tld){if(n.length<2)return!1;if(!t.allow_numeric_tld&&!/^([a-z\u00A1-\u00A8\u00AA-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]{2,}|xn[a-z0-9-]{2,})$/i.test(r))return!1;if(/\s/.test(r))return!1}return!(!t.allow_numeric_tld&&/^\d+$/.test(r))&&n.every(function(e){return!(63<e.length&&!t.ignore_max_length||!/^[a-z_\u00a1-\uffff0-9-]+$/i.test(e)||/[\uff01-\uff5e]/.test(e)||/^-|-$/.test(e)||!t.allow_underscores&&/_/.test(e))})}(i,{require_tld:t.require_tld,ignore_max_length:t.ignore_max_length,allow_underscores:t.allow_underscores})){if(!t.allow_ip_domain)return!1;if(!b(i)){if(!i.startsWith("[")||!i.endsWith("]"))return!1;var f=i.slice(1,-1);if(0===f.length||!b(f))return!1}}if('"'===u[0])return u=u.slice(1,u.length-1),t.allow_utf8_local_part?C.test(u):y.test(u);for(var d=t.allow_utf8_local_part?S:x,p=(l=u.split("."),0);p<l.length;p++)if(!d.test(l[p]))return!1;return!t.blacklisted_chars||-1===u.search(new RegExp("["+t.blacklisted_chars+"]+","g"))}return e.exports=function(e,t){return{ulpRequiredFunction:function(e,t){return!t||!!e.value},ulpEmailValidationFunction:function(e,t){return!t||!e.value||!!o(e.value)}}},e.exports}()(window,document);((t={}).exports=function(r,e,o,u,c,l,s,f,t){function d(e){"Escape"==e.code&&document.activeElement.blur()}t.enable_ulp_wcag_compliance&&e("div.c6d02143e.password").forEach(function(e){var a,i,t=r(e,"input"),n=r(e,'[data-action="toggle"]');o(e,(a=t,i=n,function(e){if(e.target.classList.contains("ulp-button-icon")){if(a.type="password"===a.type?"text":"password",i){i.ariaChecked="false"===i.ariaChecked?"true":"false";var t=i.querySelector(".show-password-tooltip"),n=i.querySelector(".hide-password-tooltip");t&&s(t,"hide"),n&&s(n,"hide")}var r=f(a);"text"===a.type?c(r,"show"):l(r,"show")}})),u(n,"keyup",d)})},t.exports)(u.querySelector,u.querySelectorAll,u.addClickListener,u.addEventListener,u.addClass,u.removeClass,u.toggleClass,u.getParent,o),((n={}).exports=function(r,e,o,u,c,l,s,t){t.enable_ulp_wcag_compliance||e("div.c6d02143e.password").forEach(function(e){var a,i,t=r(e,"input"),n=r(e,'[data-action="toggle"]');o(e,(a=t,i=n,function(e){if(e.target.classList.contains("ulp-button-icon")){if(a.type="password"===a.type?"text":"password",i){var t=i.querySelector(".show-password-tooltip"),n=i.querySelector(".hide-password-tooltip");t&&l(t,"hide"),n&&l(n,"hide")}var r=s(a);"text"===a.type?u(r,"show"):c(r,"show")}}))})},n.exports)(u.querySelector,u.querySelectorAll,u.addClickListener,u.addClass,u.removeClass,u.toggleClass,u.getParent,o),{exports:function(e,r,a,t){var n=e(".c6180b6e0"),i=e("#alert-trigger"),o=e(".cf30275f3"),u=e(".cffe5ff16"),c=!1;i&&u&&n&&t(n,function(e){var t=e.target===i,n=u.contains(e.target);return t&&!c?(r(o,"show"),void(c=!0)):t&&c||c&&!n?(a(o,"show"),void(c=!1)):void 0})}}.exports(u.querySelector,u.addClass,u.removeClass,u.addClickListener),(E="recaptcha_v2",y="recaptcha_enterprise",S="hcaptcha",C="friendly_captcha",A="arkose",F="auth0_v2",(r={}).exports=function(i,o,a,u,c,l){var s=500,f=3,d=0,p=a("div[data-captcha-sitekey]"),t=a("div[data-captcha-sitekey] input");function v(){switch(g()){case E:return window.grecaptcha;case y:return window.grecaptcha.enterprise;case S:return window.hcaptcha;case C:return window.friendlyChallenge;case A:return window.arkose;case F:return window.turnstile}}function m(){return a(function(){switch(g()){case E:case y:return"#ulp-recaptcha";case S:return"#ulp-hcaptcha";case C:return"#ulp-friendly-captcha";case A:return"#ulp-arkose";case F:return"#ulp-auth0-v2-captcha"}}())}function h(){return p.getAttribute("data-captcha-lang")}function g(){return p.getAttribute("data-captcha-provider")}function b(){return p.getAttribute("data-captcha-sitekey")}function _(){return a('form[data-form-primary="true"]')}function w(e){return t.value=e}function x(){var e=v(),t=l("--ulp-captcha-widget-theme")||"light";if(g()===C){"dark"===t&&u(a(".frc-captcha"),"dark");var n=new e.WidgetInstance(m(),{sitekey:b(),language:h(),doneCallback:function(e){w(e)}})}else{var r={sitekey:b(),theme:t,"expired-callback":function(){w(""),u(p,"c54688395"),e.reset(n)},callback:function(e){w(e),c(p,"c54688395")}};g()===F&&(r.language=h(),r.retry="never",r["response-field"]=!1,r["error-callback"]=function(e){return fetch("https://www.cloudflarestatus.com/api/v2/summary.json").then(function(e){return e.json()}).then(function(e){for(var t=0;t<e.components.length;t++){var n=e.components[t];if("Turnstile"===n.name)return"operational"===n.status}return!1}).catch(function(e){return!1}).then(function(e){e&&d<f?(w(""),u(p,"c54688395"),v().reset(n),d++):(w("BYPASS_CAPTCHA"),c(p,"c54688395"))}),!0}),n=e.render(m(),r)}}p&&function(){var e="captchaCallback_"+Math.floor(1000001*Math.random()),t=g(),n={async:!0,defer:!0},r=function(e,t,n,r){switch(g()){case E:return"https://www.recaptcha.net/recaptcha/api.js?render=explicit&hl="+e+"&onload="+t;case y:return"https://www.recaptcha.net/recaptcha/enterprise.js?render=explicit&hl="+e+"&onload="+t;case S:return"https://js.hcaptcha.com/1/api.js?render=explicit&hl="+e+"&onload="+t;case C:return"https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.14/widget.min.js";case A:return"https://"+n+".arkoselabs.com/v2/"+r+"/api.js";case F:return"https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload="+t}}(h(),e,p.getAttribute("data-captcha-client-subdomain"),b());if(t===A||t===F){n["data-callback"]=e,n.onerror=function(){if(d<f)return o(r),i(r,n),void d++;o(r),w("BYPASS_CAPTCHA")};var a=function(e){var t,n;t=e,n=function(e){setTimeout(function(){t.run()},s),e.preventDefault()},_().addEventListener("submit",n),t.setConfig({onCompleted:function(e){w(e.token),_().submit()},onError:function(e){return fetch("https://status.arkoselabs.com/api/v2/status.json").then(function(e){return e.json()}).then(function(e){var t=e.status.indicator;return"none"===t}).catch(function(e){return!1}).then(function(e){if(e&&d<f)return t.reset(),new Promise(function(e){setTimeout(function(){e(t.run())},s),d++});w("BYPASS_CAPTCHA"),_().removeEventListener("submit",n)})}})};t===F&&(a=function(){x()}),window[e]=a}else window[e]=function(){delete window[e],x()},t===C&&(u(m(),"frc-captcha"),n.onload=window[e]);i(r,n)}()},r.exports)(u.loadScript,u.removeScript,u.querySelector,u.addClass,u.removeClass,u.getCSSVariable),((a={}).exports=function(r,e,a,i,o,u,c,l,n,s,t){if(!t.enable_ulp_wcag_compliance){if(r("body._simple-labels"))return e(".cf59a1f59.no-js").forEach(function(e){o(e,"no-js")}),void e(".cf59a1f59.js-required").forEach(function(e){i(e,"hide")});e(".c6d02143e:not(.cdf0297b6):not(disabled)").forEach(function(e){i(e,"c78e586c4");var t,n=r(e,".input");n.value&&i(e,"c457439c5"),a(e,"change",f),a(n,"blur",f),a(n,"animationstart",d),t=n,c(function(){t.value&&l(t,"change",!0)},100)})}function f(e){var t=e.target,n=u(t);t.value||s(t,"data-autofilled")?i(n,"c457439c5"):o(n,"c457439c5")}function d(e){var t=e.target;"onAutoFillStart"===e.animationName&&(n(t,"data-autofilled",!0),l(e.target,"change",!0),a(t,"keyup",p,{once:!0}))}function p(e){var t=e.target;n(t,"data-autofilled","")}},a.exports)(u.querySelector,u.querySel</script></body></html>

@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.nav-bg {
+    background-color: #1e7b85;
+}
+.logo {
+    border-radius: 10px;
+}
+.nav-link, .dropdown-item {
+    color: #fff;
+    font-weight: 600;
+    font-size: large;
+}
+.nav-link:hover {
+    color: #fff;
+}
+.ft-link {
+    color: #fff;
+    font-weight: 600;
+    font-size: medium;
+    text-decoration: none;
+    position: relative; /* Add this to position the border correctly */
+}
+
+.ft-link:hover {
+    border-bottom: 2px solid #fff; /* Adjust the border size and color as needed */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+main {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.notice {
+    background-color: #FFFFCC;
+}
+
+label {
+    font-size: 1.2em;
+}
+
+input[type="url"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #1e7b85;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 500px;
+}
+
+button {
+    padding: 10px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #1e7b85;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1A646C;
+}
+
+#progress {
+    display: none;
+    margin-top: 20px;
+}
+
+#progress p {
+    margin: 0 0 10px 0;
+    font-size: 1em;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+    max-width: 500px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #007bff;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+@media (max-width: 576px) {
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    label {
+        font-size: 1em;
+    }
+
+    input[type="url"], button, progress {
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 8px;
+    }
+    .heading-text {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    .heading-text {
+        font-size: 1rem; 
+    }
+}
+@media (min-width: 769px) {
+    .heading-text {
+        font-size: 1.5rem; /* Adjust as needed for larger screens */
+    }
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    background-color: #fff;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+#languageDropdown:hover + .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+}
+
+.custom-container {
+    max-width: 1100px; /* Adjust the max-width as needed */
+    margin: 0 auto;    /* Center the container */
+    padding: 0 15px;   /* Optional: Add some padding for better aesthetics */
+}
+
