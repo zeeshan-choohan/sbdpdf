@@ -97,12 +97,12 @@ async function downloadDocument(url) {
 
         await ensureLoggedIn(page);
 
-        await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+        await page.goto(url, { waitUntil: 'networkidle2', timeout: 120000 });
         console.log(`Navigated to URL: ${url}`);
 
-        await new Promise(resolve => setTimeout(resolve, 5000)); // Wait for 5 seconds
+        await new Promise(resolve => setTimeout(resolve, 15000)); // Wait for 15 seconds
         console.log('Waiting for the download button to appear...');
-        await page.waitForSelector("div[class='doc_actions'] span[class='icon icon-ic_download_with_line']", { visible: true, timeout: 60000 });
+        await page.waitForSelector("div[class='doc_actions'] span[class='icon icon-ic_download_with_line']", { visible: true, timeout: 120000 });
         console.log('Clicking the download button...');
         await page.evaluate(() => {
             const button = document.querySelector("div[class='doc_actions'] span[class='icon icon-ic_download_with_line']");
@@ -113,11 +113,11 @@ async function downloadDocument(url) {
             }
         });
 
-        await new Promise(resolve => setTimeout(resolve, 3000)); // Additional wait for the modal to appear
+        await new Promise(resolve => setTimeout(resolve, 5000)); // Additional wait for the modal to appear
         console.log('Waiting for the download modal to appear...');
         await page.waitForFunction(() => {
             return document.querySelector('.wrapper__filled-button.download_selection_btn') !== null;
-        }, { timeout: 60000 });
+        }, { timeout: 120000 });
         console.log('Download modal appeared.');
 
         // Prevent the modal from closing
@@ -138,7 +138,7 @@ async function downloadDocument(url) {
         await page.waitForSelector('.wrapper__filled-button.download_selection_btn', { visible: true, timeout: 120000 });
         console.log('Clicking the download selection button...');
         await page.click('.wrapper__filled-button.download_selection_btn');
-        await new Promise(resolve => setTimeout(resolve, 3000)); // Additional wait for the modal to appear
+        await new Promise(resolve => setTimeout(resolve, 5000)); // Additional wait for the modal to appear
 
         // Remove request interception to allow download
         await page.setRequestInterception(false);
