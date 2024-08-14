@@ -17,6 +17,9 @@ body {
     background-color: #1e7b85;
 }
 .logo {
+    width: 100%;
+    height: auto; /* This maintains the aspect ratio */
+    max-width: 40px; /* Or any maximum size you prefer */
     border-radius: 10px;
 }
 .nav-link, .dropdown-item {

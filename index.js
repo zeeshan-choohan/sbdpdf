@@ -4,6 +4,8 @@ const path = require('path');
 const fs = require('fs').promises;
 const puppeteer = require('puppeteer');
 const cron = require('node-cron');
+const { SitemapStream, streamToPromise } = require('sitemap');
+const { createWriteStream } = require('fs');
 require('dotenv').config();
 
 const app = express();
@@ -24,6 +26,41 @@ const DOWNLOAD_DIR = path.join(__dirname, 'downloadedfile');
 fs.mkdir(DOWNLOAD_DIR, { recursive: true }).catch(console.error);
 
 let browser;
+
+const hostname = 'https://scribdpdfdownloader.com';
+
+const urls = [
+  { url: '/', changefreq: 'daily', priority: 1.0, lastmod: new Date() },
+  { url: '/about', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
+  { url: '/privacy-policy', changefreq: 'monthly', priority: 0.8, lastmod: new Date() },
+  { url: '/disclaimer', changefreq: 'monthly', priority: 0.8, lastmod: new Date() },
+  { url: '/terms-of-service', changefreq: 'monthly', priority: 0.8, lastmod: new Date() },
+  { url: '/blog', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
+  { url: '/contact', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
+  { url: '/sitemap.xml', changefreq: 'weekly', priority: 0.5, lastmod: new Date() }, // Sitemap file
+  { url: '/robots.txt', changefreq: 'monthly', priority: 0.5, lastmod: new Date() }  // Robots.txt file
+];
+
+// Array of language-specific routes
+const languages = ['es', 'de', 'fr', 'id', 'it', 'pt', 'ro', 'ru'];
+
+languages.forEach((lang) => {
+  urls.push({
+    url: `/${lang}`,
+    changefreq: 'weekly',
+    priority: 1.0,
+    lastmod: new Date()
+  });
+});
+
+const sitemap = new SitemapStream({ hostname });
+
+urls.forEach((url) => sitemap.write(url));
+sitemap.end();
+
+streamToPromise(sitemap).then((data) => {
+  createWriteStream('./sitemap.xml').write(data);
+});
 
 // Function to login and save cookies
 async function loginAndSaveCookies(page) {
