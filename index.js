@@ -37,6 +37,12 @@ const urls = [
   { url: '/terms-of-service', changefreq: 'monthly', priority: 0.8, lastmod: new Date() },
   { url: '/blog', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
   { url: '/contact', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
+  { url: '/how-to-read-scribd-files-for-free', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
+  { url: '/where-to-find-downloaded-scribd-files', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
+  { url: '/how-to-download-scribd-documents-as-pdf', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
+  { url: '/how-much-is-scribd-monthly-subscription', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
+  { url: '/how-to-get-a-refund-from-scribd', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
+  { url: '/how-to-cancel-scribd-subscription', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
   { url: '/sitemap.xml', changefreq: 'weekly', priority: 0.5, lastmod: new Date() }, // Sitemap file
   { url: '/robots.txt', changefreq: 'monthly', priority: 0.5, lastmod: new Date() }  // Robots.txt file
 ];

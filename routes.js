@@ -32,6 +32,28 @@ router.get('/contact', (req, res) => {
     res.sendFile(path.join(__dirname, 'contact.html'));
 });
 
+router.get('/how-to-read-scribd-files-for-free' , (req , res) => {
+    res.sendFile(path.join(__dirname, 'how-to-read-scribd-files-for-free.html'));
+});
+
+router.get('/where-to-find-downloaded-scribd-files' , (req , res) => {
+    res.sendFile(path.join(__dirname, 'where-to-find-downloaded-scribd-files.html'));
+});
+router.get('/how-to-download-scribd-documents-as-pdf' , (req , res) => {
+    res.sendFile(path.join(__dirname, 'how-to-download-scribd-documents-as-pdf.html'));
+});
+router.get('/how-much-is-scribd-monthly-subscription' , (req , res) => {
+    res.sendFile(path.join(__dirname, 'how-much-is-scribd-monthly-subscription.html'));
+});
+router.get('/how-to-get-a-refund-from-scribd' , (req , res) => {
+    res.sendFile(path.join(__dirname, 'how-to-get-a-refund-from-scribd.html'));
+});
+
+router.get('/how-to-cancel-scribd-subscription' , (req , res) => {
+    res.sendFile(path.join(__dirname, 'how-to-cancel-scribd-subscription.html'));
+});
+
+
 // Language-specific routes
 router.get('/:lang', async (req, res, next) => {
     const lang = req.params.lang?.toLowerCase();
