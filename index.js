@@ -36,6 +36,7 @@ const urls = [
   { url: '/disclaimer', changefreq: 'monthly', priority: 0.8, lastmod: new Date() },
   { url: '/terms-of-service', changefreq: 'monthly', priority: 0.8, lastmod: new Date() },
   { url: '/blog', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
+  { url: '/es_blog', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
   { url: '/contact', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
   { url: '/how-to-read-scribd-files-for-free', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
   { url: '/where-to-find-downloaded-scribd-files', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },

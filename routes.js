@@ -53,6 +53,10 @@ router.get('/how-to-cancel-scribd-subscription' , (req , res) => {
     res.sendFile(path.join(__dirname, 'how-to-cancel-scribd-subscription.html'));
 });
 
+router.get('/es_blog' , (req , res) => {
+    res.sendFile(path.join(__dirname, 'es_blog.html'));
+});
+
 
 // Language-specific routes
 router.get('/:lang', async (req, res, next) => {
