@@ -1,15 +1,16 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif , serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    font-size: 17px;
 }
 
 .container {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #EEE8DD;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
@@ -18,9 +19,11 @@ body {
 }
 .logo {
     width: 100%;
-    height: auto; /* This maintains the aspect ratio */
-    max-width: 40px; /* Or any maximum size you prefer */
+    height: 40px; 
+    /* max-width: 100px; */
     border-radius: 10px;
+    margin: 0;
+    padding: 0;
 }
 .nav-link, .dropdown-item {
     color: #fff;
@@ -76,16 +79,17 @@ input[type="url"] {
     border: 1px solid #1e7b85;
     border-radius: 4px;
     width: 100%;
-    max-width: 500px;
+    max-width: 800px;
 }
 
 button {
     padding: 10px;
-    font-size: 1em;
+    width: 300px;
+    font-size: 1.2em;
     color: #fff;
     background-color: #1e7b85;
     border: none;
-    border-radius: 4px;
+    border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -115,6 +119,84 @@ progress {
     font-size: 1em;
     color: #007bff;
 }
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+.block{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.left-card {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(0%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.left-card.visible {
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideInFromLeft 2s ease forwards;
+}
+
+.left-card.hidden {
+    opacity: 0;
+    transform: translateX(0%);
+}
+
+
+/* Keyframe for sliding in from the right */
+@keyframes slideInFromRight {
+    from {
+        transform: translateY(100%); /* Start from off the right side of the screen */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); /* Move to the original position */
+        opacity: 1;
+    }
+}
+
+/* Cards initially hidden off the right side */
+.right-card {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(0%); /* Positioned off the right side */
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* When visible, they slide in from the right */
+.right-card.visible {
+    opacity: 1;
+    transform: translateY(0); /* Slide to its original place */
+    animation: slideInFromRight 2s ease forwards;
+}
+
+/* Reset the position when they leave the viewport */
+.right-card.hidden {
+    opacity: 0;
+    transform: translateY(0%); /* Hide off the right side */
+}
+
 
 footer {
     text-align: center;
@@ -146,10 +228,27 @@ footer p {
     }
 
     button {
-        padding: 8px;
+        padding: 10px;
+        width: 150px;
+        font-size: 1.2em;
+        color: #fff;
+        background-color: #1e7b85;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
     }
     .heading-text {
-        font-size: 1rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .logo {
+        width: 100%;
+        height: 30px; 
+        /* max-width: 100px; */
+        /* border-radius: 10px; */
+        margin: 0;
+        padding: 0;
     }
 }
 @media (min-width: 577px) and (max-width: 768px) {
@@ -159,7 +258,8 @@ footer p {
 }
 @media (min-width: 769px) {
     .heading-text {
-        font-size: 1.5rem; /* Adjust as needed for larger screens */
+        font-size: 1.5rem; 
+        font-weight: bold;
     }
 }
 
