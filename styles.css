@@ -82,7 +82,7 @@ input[type="url"] {
     max-width: 800px;
 }
 
-button {
+.dwn_button {
     padding: 10px;
     width: 300px;
     font-size: 1.2em;
@@ -94,7 +94,7 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.dwn_button:hover {
     background-color: #1A646C;
 }
 
@@ -227,7 +227,7 @@ footer p {
         font-size: 0.9em;
     }
 
-    button {
+    .dwn_button {
         padding: 5px;
         width: 120px;
         font-size: 1em;
