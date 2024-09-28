@@ -78,4 +78,9 @@ router.get('/:lang', async (req, res, next) => {
     }
 });
 
+// Catch-all route for 404 errors
+router.use((req, res) => {
+    res.status(404).sendFile(path.join(__dirname, '404.html'));
+});
+
 module.exports = router;

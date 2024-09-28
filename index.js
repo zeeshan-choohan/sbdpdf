@@ -44,6 +44,7 @@ const urls = [
   { url: '/how-much-is-scribd-monthly-subscription', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
   { url: '/how-to-get-a-refund-from-scribd', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
   { url: '/how-to-cancel-scribd-subscription', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
+  { url: '/404.html', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
   { url: '/sitemap.xml', changefreq: 'weekly', priority: 0.5, lastmod: new Date() }, // Sitemap file
   { url: '/robots.txt', changefreq: 'monthly', priority: 0.5, lastmod: new Date() }  // Robots.txt file
 ];
