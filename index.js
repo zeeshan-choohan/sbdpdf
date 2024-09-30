@@ -36,7 +36,6 @@ const urls = [
   { url: '/disclaimer', changefreq: 'monthly', priority: 0.8, lastmod: new Date() },
   { url: '/terms-of-service', changefreq: 'monthly', priority: 0.8, lastmod: new Date() },
   { url: '/blog', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
-  { url: '/es_blog', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
   { url: '/contact', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
   { url: '/how-to-read-scribd-files-for-free', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
   { url: '/where-to-find-downloaded-scribd-files', changefreq: 'monthly', priority: 0.9, lastmod: new Date() },
@@ -48,18 +47,6 @@ const urls = [
   { url: '/sitemap.xml', changefreq: 'weekly', priority: 0.5, lastmod: new Date() }, // Sitemap file
   { url: '/robots.txt', changefreq: 'monthly', priority: 0.5, lastmod: new Date() }  // Robots.txt file
 ];
-
-// Array of language-specific routes
-const languages = ['es', 'de', 'fr', 'id', 'it', 'pt', 'ro', 'ru'];
-
-languages.forEach((lang) => {
-  urls.push({
-    url: `/${lang}`,
-    changefreq: 'weekly',
-    priority: 1.0,
-    lastmod: new Date()
-  });
-});
 
 const sitemap = new SitemapStream({ hostname });
 

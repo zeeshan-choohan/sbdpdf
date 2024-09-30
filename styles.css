@@ -25,7 +25,7 @@ body {
     margin: 0;
     padding: 0;
 }
-.nav-link, .dropdown-item {
+.nav-link{
     color: #fff;
     font-weight: 600;
     font-size: large;
@@ -156,7 +156,7 @@ progress {
 .left-card.visible {
     opacity: 1;
     transform: translateX(0);
-    animation: slideInFromLeft 2s ease forwards;
+    animation: slideInFromLeft 1s ease forwards;
 }
 
 .left-card.hidden {
@@ -188,7 +188,7 @@ progress {
 .right-card.visible {
     opacity: 1;
     transform: translateY(0); /* Slide to its original place */
-    animation: slideInFromRight 2s ease forwards;
+    animation: slideInFromRight 1s ease forwards;
 }
 
 /* Reset the position when they leave the viewport */
@@ -208,40 +208,13 @@ footer p {
     font-size: 0.9em;
     color: #fff;
 }
-
-.btn {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #1e7b85;
-    color: white;
-    border-radius: 50px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #158387;
-    color: white;
-    transform: scale(1.05);
-}
-
-.btn-outline {
-    background-color: transparent;
-    border: 2px solid #1e7b85;
-    color: #1e7b85;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.btn-outline:hover {
-    background-color: #1e7b85;
-    color: white;
-    transform: scale(1.05);
-}
-
-
 @media (max-width: 576px) {
     .container {
         margin: 20px auto;
         padding: 15px;
+    }
+    .navbar-collapse {
+        display: flex;
     }
 
     header h1 {
@@ -277,16 +250,6 @@ footer p {
         margin: 0;
         padding: 0;
     }
-    .btn {
-        margin-top: 7em;
-        padding: 5px 20px;
-        font-size: 1em;
-        background-color: #1e7b85;
-        border: none;
-        color: white;
-        border-radius: 25px;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
     .error-image {
         margin-top: 20px;
         max-width:100%;
@@ -321,19 +284,6 @@ footer p {
 
 .nav-link:hover::after {
     background-color: #fff;
-}
-
-.dropdown-menu.show {
-    display: block;
-}
-
-.dropdown-item:hover {
-    background-color: #f8f9fa;
-}
-
-#languageDropdown:hover + .dropdown-menu,
-.dropdown-menu:hover {
-    display: block;
 }
 
 .custom-container {
