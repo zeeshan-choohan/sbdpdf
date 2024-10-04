@@ -113,6 +113,11 @@ progress {
     height: 20px;
     max-width: 500px;
 }
+.icon-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
 
 #result {
     margin-top: 20px;
