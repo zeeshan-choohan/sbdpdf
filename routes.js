@@ -53,6 +53,36 @@ router.get('/how-to-cancel-scribd-subscription' , (req , res) => {
     res.sendFile(path.join(__dirname, 'how-to-cancel-scribd-subscription.html'));
 });
 
+// Add IndexNow functionality to a new route
+router.post('/submit-indexnow', async (req, res) => {
+    const urlList = req.body.urlList || []; // Expecting list of URLs in request body
+    const key = '5d72b8c4b3744971b8a96575bd7760ed'; // Your API key
+    const keyLocation = `https://scribdpdfdownloader.com/${key}.txt`; // Path to key file
+
+    if (!urlList.length) {
+        return res.status(400).json({ message: 'No URLs provided for submission.' });
+    }
+
+    const requestBody = {
+        host: 'scribdpdfdownloader.com',
+        key: key,
+        keyLocation: keyLocation,
+        urlList: urlList
+    };
+
+    try {
+        const response = await axios.post('https://api.indexnow.org/indexnow', requestBody, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        res.status(200).json({ message: 'URLs submitted successfully', data: response.data });
+    } catch (error) {
+        console.error('Error submitting URLs to IndexNow:', error);
+        res.status(500).json({ message: 'Error submitting URLs', error: error.message });
+    }
+});
+
 // Catch-all route for 404 errors
 router.use((req, res) => {
     res.status(404).sendFile(path.join(__dirname, '404.html'));

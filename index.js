@@ -6,6 +6,7 @@ const puppeteer = require('puppeteer');
 const cron = require('node-cron');
 const { SitemapStream, streamToPromise } = require('sitemap');
 const { createWriteStream } = require('fs');
+const axios = require('axios'); // For IndexNow submission
 require('dotenv').config();
 
 const app = express();
@@ -55,7 +56,32 @@ sitemap.end();
 
 streamToPromise(sitemap).then((data) => {
   createWriteStream('./sitemap.xml').write(data);
+  submitToIndexNow(urls.map(u => hostname + u.url)); // Auto-submit updated URLs to IndexNow
 });
+
+// Function to submit URLs to IndexNow
+async function submitToIndexNow(urlList) {
+    const key = '5d72b8c4b3744971b8a96575bd7760ed';
+    const keyLocation = `https://scribdpdfdownloader.com/${key}.txt`;
+  
+    const requestBody = {
+      host: 'scribdpdfdownloader.com',
+      key: key,
+      keyLocation: keyLocation,
+      urlList: urlList
+    };
+  
+    try {
+      const response = await axios.post('https://api.indexnow.org/indexnow', requestBody, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      console.log('URLs submitted to IndexNow:', response.data);
+    } catch (error) {
+      console.error('Error submitting URLs to IndexNow:', error.message);
+    }
+  }
 
 // Function to login and save cookies
 async function loginAndSaveCookies(page) {
